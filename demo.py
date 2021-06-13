@@ -11,3 +11,8 @@ class Node:
         if self.isDestroyed:
             self.isSelectable = False
             self.isOpen = False
+            self.left = None
+            self.right = None
+            return
+        if self.left is None or self.right is None:
+            self.isOpen = True
